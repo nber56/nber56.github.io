@@ -224,7 +224,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>在基础入门（1）中，对wwise相关工作原理基本有了认知和理解，之后再通过游戏比赛积累游戏引擎与wwise的集成经验，所以大概分为两部分，一部分是unity和wwise,另一部分是ue4和wwise.此时需要的资源wwise官方只能提供一部分，还需要其他的参考，其中遇到的不少程序问题并不能很解决。而且游戏越复杂音频也越难，可想而知那些牵连到程序端的问题是很难通过个人解决的。当然，除非你是技术音频。<br>以下是我在游戏比赛中的认识</p>
+          <span id="more"></span>
+<p>在基础入门（1）中，对wwise相关工作原理基本有了认知和理解，之后再通过游戏比赛积累游戏引擎与wwise的集成经验，所以大概分为两部分，一部分是unity和wwise,另一部分是ue4和wwise.此时需要的资源wwise官方只能提供一部分，还需要其他的参考，其中遇到的不少程序问题并不能很解决。而且游戏越复杂音频也越难，可想而知那些牵连到程序端的问题是很难通过个人解决的。当然，除非你是技术音频。<br>以下是我在游戏比赛中的认识</p>
 <h1 id="unity相关"><a href="#unity相关" class="headerlink" title="unity相关"></a><font color=red>unity相关</font></h1><p>第一阶段<br>【wwise官方文档】（<a target="_blank" rel="noopener" href="https://www.audiokinetic.com/zh/library/edge/?source=Unity&id=index.html%EF%BC%89">https://www.audiokinetic.com/zh/library/edge/?source=Unity&amp;id=index.html）</a><br>以及301课程<br>第二阶段<br>【coju sound-unitywwise】<br>【gameaudioresource】<br>【alessandrofama gameaudio tutorials】<br>以及一系列YouTube频道知识方向平台，很多了<br>结合在一起可以解决诸多的简单问题，例如简单动作，触发音乐，设置区域的空间音频效果<br>第三阶段<br>1 学会debug，依靠经验和综合能力【故障排除】（<a target="_blank" rel="noopener" href="https://www.audiokinetic.com/zh/library/edge/?source=Unity&id=unity_troubleshooting.html%EF%BC%89">https://www.audiokinetic.com/zh/library/edge/?source=Unity&amp;id=unity_troubleshooting.html）</a><br>2 找程序或者自己充当程序，前两个阶段引擎内部拖拉拽，改改参数即可，但是没有开发能力的人很难应对多样需求，而且根本无从下手，遇到问题只能寻求帮助<br>3 无法解决的问题。遇到过，很难顶。  </p>
 <hr>
 <p>做过的的第一个游戏音频是unity的，交作品的时候wwise还没搞好，游戏还有bug没来得及，自己绑定也搞出bug，没提交完整作为音频非常遗憾当时。</p>
@@ -299,7 +300,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="了解学习Wwise-SDK"><a href="#了解学习Wwise-SDK" class="headerlink" title="了解学习Wwise SDK"></a>了解学习Wwise SDK</h1><p>即使在做过音乐音效，参与游戏开发之后还是有着生疏感，如果是一款大型游戏，如果是其他游戏引擎，如果是创意形式的音频需求，该怎么办呢？对于刚入门的新人，是非常有挑战的课题。所以学习wwise更加底层的内容是很有帮助的。附上溪夜的文章地址<br>【WAAPI适合所有人]（<a target="_blank" rel="noopener" href="https://blog.audiokinetic.com/zh/everyone-can-use-waapi-overview/%EF%BC%89">https://blog.audiokinetic.com/zh/everyone-can-use-waapi-overview/）</a><br>内容很有启发.但是深入这部分也有一定的前置要求。具体看原文便可理解。<br>结合我个人的情况，我也只能是很粗浅的学习一下。我学过c,python以及其他一些语言，实际能力非常浅。下面我具体分析一下学习的内容和方向。</p>
+          <span id="more"></span>
+<h1 id="了解学习Wwise-SDK"><a href="#了解学习Wwise-SDK" class="headerlink" title="了解学习Wwise SDK"></a>了解学习Wwise SDK</h1><p>即使在做过音乐音效，参与游戏开发之后还是有着生疏感，如果是一款大型游戏，如果是其他游戏引擎，如果是创意形式的音频需求，该怎么办呢？对于刚入门的新人，是非常有挑战的课题。所以学习wwise更加底层的内容是很有帮助的。附上溪夜的文章地址<br>【WAAPI适合所有人]（<a target="_blank" rel="noopener" href="https://blog.audiokinetic.com/zh/everyone-can-use-waapi-overview/%EF%BC%89">https://blog.audiokinetic.com/zh/everyone-can-use-waapi-overview/）</a><br>内容很有启发.但是深入这部分也有一定的前置要求。具体看原文便可理解。<br>结合我个人的情况，我也只能是很粗浅的学习一下。我学过c,python以及其他一些语言，实际能力非常浅。下面我具体分析一下学习的内容和方向。</p>
 <hr>
 <p><em>首先，查看wwise用户文档，wwise SDk区域，有不同的章节，可以按照顺序也可以选择阅读。大致三部分</em></p>
 <h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><p>开始前的准备工作&#x2F;声音引擎集成纵览&#x2F;示例&#x2F;进阶内容&#x2F;参考材料<br>关于SDK原理，结构的描述，还有关于具体声音实例，具体应用实例。这一部分需要不断理解。<br>其中<br>(Wwise SDK 2022.1.6 &gt; 声音引擎集成纵览 &gt; 将 Wwise 元素集成到游戏中)<br>介绍了wwise工程中各模块进入的解释：举例如下<br>1 RTPC的函数原理，需要在不同使用状况下正确配置，避免游戏内混乱<br>2 event在游戏内会出现发送事件和实际播放声音的延迟，具体的延迟计算  </p>
@@ -430,7 +432,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="101"><a href="#101" class="headerlink" title="101"></a><font color=red>101</font></h1><p>下面是旧版本cube的音效交互演示</p>
+          <span id="more"></span>
+<h1 id="101"><a href="#101" class="headerlink" title="101"></a><font color=red>101</font></h1><p>下面是旧版本cube的音效交互演示</p>
 <iframe src="//player.bilibili.com/player.html?aid=317510403&bvid=BV1xP411p7mZ&cid=1242641231&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
 
 <p>重新设计了部分音效<br>|  ammo  |<br>|  armour  |<br>|  chaingun  |<br>|  health  |<br>|  itemspawn  |<br>|  rile  |<br>|  rock hit-001  |<br>|  rock hit-002  |<br>|  rocket shot  |<br>|  shotgun blast  |<br>|  shatgun_pump  |<br>|  teleport_emitter  |<br>|  teleporter  |  </p>
