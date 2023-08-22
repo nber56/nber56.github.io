@@ -21,29 +21,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"nber56.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="欢迎访问">
+    <meta name="description" content="了解学习Wwise SDK即使在做过音乐音效，参与游戏开发之后还是有着生疏感，如果是一款大型游戏，如果是其他游戏引擎，如果是创意形式的音频需求，该怎么办呢？对于刚入门的新人，是非常有挑战的课题。所以学习wwise更加底层的内容是很有帮助的。附上溪夜的文章地址【WAAPI适合所有人]（https:&#x2F;&#x2F;blog.audiokinetic.com&#x2F;zh&#x2F;everyone-can-use-waapi-ov">
 <meta property="og:type" content="article">
-<meta property="og:title" content="文章2">
-<meta property="og:url" content="https://nber56.github.io/2023/07/16/%E6%96%87%E7%AB%A02/index.html">
+<meta property="og:title" content="Wwise基础入门（3）">
+<meta property="og:url" content="https://nber56.github.io/2023/08/22/Wwise%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%883%EF%BC%89/index.html">
 <meta property="og:site_name" content="六币载的博客">
-<meta property="og:description" content="欢迎访问">
+<meta property="og:description" content="了解学习Wwise SDK即使在做过音乐音效，参与游戏开发之后还是有着生疏感，如果是一款大型游戏，如果是其他游戏引擎，如果是创意形式的音频需求，该怎么办呢？对于刚入门的新人，是非常有挑战的课题。所以学习wwise更加底层的内容是很有帮助的。附上溪夜的文章地址【WAAPI适合所有人]（https:&#x2F;&#x2F;blog.audiokinetic.com&#x2F;zh&#x2F;everyone-can-use-waapi-ov">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-07-16T04:55:32.936Z">
-<meta property="article:modified_time" content="2023-07-16T05:16:40.624Z">
+<meta property="article:published_time" content="2023-08-22T12:46:50.226Z">
+<meta property="article:modified_time" content="2023-08-22T12:45:48.239Z">
 <meta property="article:author" content="唐毅">
-<meta property="article:tag" content="yy">
-<meta property="article:tag" content="aa">
+<meta property="article:tag" content="wwise">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://nber56.github.io/2023/07/16/%E6%96%87%E7%AB%A02/">
+<link rel="canonical" href="https://nber56.github.io/2023/08/22/Wwise%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%883%EF%BC%89/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://nber56.github.io/2023/07/16/%E6%96%87%E7%AB%A02/","path":"2023/07/16/文章2/","title":"文章2"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://nber56.github.io/2023/08/22/Wwise%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%883%EF%BC%89/","path":"2023/08/22/Wwise基础入门（3）/","title":"Wwise基础入门（3）"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>文章2 | 六币载的博客</title>
+<title>Wwise基础入门（3） | 六币载的博客</title>
   
 
 
@@ -103,7 +102,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -116,6 +115,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%86%E8%A7%A3%E5%AD%A6%E4%B9%A0Wwise-SDK"><span class="nav-number">1.</span> <span class="nav-text">了解学习Wwise SDK</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86"><span class="nav-number">1.1.</span> <span class="nav-text">第一部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86"><span class="nav-number">1.2.</span> <span class="nav-text">第二部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86"><span class="nav-number">1.3.</span> <span class="nav-text">第三部分</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -186,7 +186,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://nber56.github.io/2023/07/16/%E6%96%87%E7%AB%A02/">
+    <link itemprop="mainEntityOfPage" href="https://nber56.github.io/2023/08/22/Wwise%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%883%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -199,12 +199,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="文章2 | 六币载的博客">
+      <meta itemprop="name" content="Wwise基础入门（3） | 六币载的博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          文章2
+          Wwise基础入门（3）
         </h1>
 
         <div class="post-meta-container">
@@ -215,7 +215,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9F%B3%E4%B9%90-%E7%94%B5%E5%BD%B1/" itemprop="url" rel="index"><span itemprop="name">音乐 电影</span></a>
+          <a href="/categories/%E9%9F%B3%E9%A2%91%E4%BA%A4%E4%BA%92/" itemprop="url" rel="index"><span itemprop="name">音频交互</span></a>
         </span>
     </span>
 
@@ -228,7 +228,69 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body" itemprop="articleBody"><h1 id="了解学习Wwise-SDK"><a href="#了解学习Wwise-SDK" class="headerlink" title="了解学习Wwise SDK"></a>了解学习Wwise SDK</h1><p>即使在做过音乐音效，参与游戏开发之后还是有着生疏感，如果是一款大型游戏，如果是其他游戏引擎，如果是创意形式的音频需求，该怎么办呢？对于刚入门的新人，是非常有挑战的课题。所以学习wwise更加底层的内容是很有帮助的。附上溪夜的文章地址<br>【WAAPI适合所有人]（<a target="_blank" rel="noopener" href="https://blog.audiokinetic.com/zh/everyone-can-use-waapi-overview/%EF%BC%89">https://blog.audiokinetic.com/zh/everyone-can-use-waapi-overview/）</a><br>内容很有启发.但是深入这部分也有一定的前置要求。具体看原文便可理解。<br>结合我个人的情况，我也只能是很粗浅的学习一下。我学过c,python以及其他一些语言，实际能力非常浅。下面我具体分析一下学习的内容和方向。</p>
+<hr>
+<p><em>首先，查看wwise用户文档，wwise SDk区域，有不同的章节，可以按照顺序也可以选择阅读。大致三部分</em></p>
+<h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><p>开始前的准备工作&#x2F;声音引擎集成纵览&#x2F;示例&#x2F;进阶内容&#x2F;参考材料<br>关于SDK原理，结构的描述，还有关于具体声音实例，具体应用实例。这一部分需要不断理解。<br>其中<br>(Wwise SDK 2022.1.6 &gt; 声音引擎集成纵览 &gt; 将 Wwise 元素集成到游戏中)<br>介绍了wwise工程中各模块进入的解释：举例如下<br>1 RTPC的函数原理，需要在不同使用状况下正确配置，避免游戏内混乱<br>2 event在游戏内会出现发送事件和实际播放声音的延迟，具体的延迟计算  </p>
+<h2 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h2><p>版本和平台信息<br>适配问题是一个重要的方面</p>
+<h2 id="第三部分"><a href="#第三部分" class="headerlink" title="第三部分"></a>第三部分</h2><p>模块&#x2F;命名空间&#x2F;类&#x2F;文件<br>这一部分在实际开发和学习中需要不断理解和总结，内容比较多。个人感觉难度稍高<br>举例：获取有关RTPC的信息<br>1 查找使用函数ak.wwise.core.object.get<br>2 选择查询参数，比如用WAQL,引擎内获取GUID填入   </p>
+<pre><code>&#123;
+&quot;waql&quot;: &quot;\&quot;&#123;67A2C1B5-4FBF-4938-A86C-4AEE7E84822A&#125;\&quot;&quot;
+&#125;  
+</code></pre>
+<p>3 选择返回选项，即是查询信息    </p>
+<pre><code>&#123;
+&quot;return&quot;: [
+    &quot;type&quot;,
+    &quot;path&quot;,
+    &quot;@PropertyName&quot;,
+    &quot;@ControlInput&quot;,
+    &quot;@Curve&quot;
+]
+&#125;
+</code></pre>
+<p>4 输出结果</p>
+<p> {<br>    “return”: [<br>        {<br>            “@ControlInput”: {<br>                “id”: “{4CCB066B-FB7D-4894-9D07-1C42D28E3256}”,<br>                “name”: “Modulator Time (Custom)”</p>
+<pre><code>        &#125;,
+        &quot;@Curve&quot;: &#123;
+            &quot;id&quot;: &quot;&#123;AFECA9AF-21D9-4CC0-81E4-19A7264934EF&#125;&quot;,
+            &quot;points&quot;: [
+                &#123;
+                    &quot;shape&quot;: &quot;Linear&quot;,
+                    &quot;x&quot;: 0.0,
+                    &quot;y&quot;: -40.0
+                &#125;,
+                &#123;
+                    &quot;shape&quot;: &quot;Linear&quot;,
+                    &quot;x&quot;: 0.138,
+                    &quot;y&quot;: 114.0
+                &#125;,
+                &#123;
+                    &quot;shape&quot;: &quot;Linear&quot;,
+                    &quot;x&quot;: 0.40673,
+                    &quot;y&quot;: -148.0
+                &#125;,
+                &#123;
+                    &quot;shape&quot;: &quot;Linear&quot;,
+                    &quot;x&quot;: 0.77829,
+                    &quot;y&quot;: 162.0
+                &#125;,
+                &#123;
+                    &quot;shape&quot;: &quot;Linear&quot;,
+                    &quot;x&quot;: 1.0,
+                    &quot;y&quot;: -71.0
+                &#125;
+            ]
+        &#125;,
+        &quot;@PropertyName&quot;: &quot;MidiVelocityOffset&quot;,
+        &quot;path&quot;: &quot;\\Actor-Mixer Hierarchy\\Default Work Unit\\RTPC_TEST\\[RTPC: Velocity Offset, Modulator Time (Custom)]&quot;,
+        &quot;type&quot;: &quot;RTPC&quot;
+
+    &#125;
+]
+</code></pre>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>以阅读wwise SDK用户文档为主</p>
+
     </div>
 
     
@@ -237,21 +299,20 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/yy/" rel="tag"># yy</a>
-              <a href="/tags/aa/" rel="tag"># aa</a>
+              <a href="/tags/wwise/" rel="tag"># wwise</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/07/16/%E6%96%87%E7%AB%A01/" rel="prev" title="文章1">
-                  <i class="fa fa-chevron-left"></i> 文章1
+                <a href="/2023/08/22/Wwise%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%881%EF%BC%89/" rel="prev" title="Wwise基础入门（1）">
+                  <i class="fa fa-chevron-left"></i> Wwise基础入门（1）
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/07/16/%E6%96%87%E7%AB%A03/" rel="next" title="文章3">
-                  文章3 <i class="fa fa-chevron-right"></i>
+                <a href="/2023/08/22/Wwise%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%882%EF%BC%89/" rel="next" title="Wwise基础入门（2）">
+                  Wwise基础入门（2） <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

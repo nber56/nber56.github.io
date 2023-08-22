@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/black/pace-theme-loading-bar.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"nber56.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="101下面是旧版本cube的音效交互演示      重新设计了部分音效|  ammo  ||  armour  ||  chaingun  ||  health  ||  itemspawn  ||  rile  ||  rock hit-001  ||  rock hit-002  ||  rocket shot  ||  shotgun blast  ||  shatgun_pump  ||">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Wwise基础入门（1）">
+<meta property="og:url" content="https://nber56.github.io/2023/08/22/Wwise%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%881%EF%BC%89/index.html">
+<meta property="og:site_name" content="六币载的博客">
+<meta property="og:description" content="101下面是旧版本cube的音效交互演示      重新设计了部分音效|  ammo  ||  armour  ||  chaingun  ||  health  ||  itemspawn  ||  rile  ||  rock hit-001  ||  rock hit-002  ||  rocket shot  ||  shotgun blast  ||  shatgun_pump  ||">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-08-22T12:46:50.225Z">
+<meta property="article:modified_time" content="2023-08-22T12:44:50.722Z">
+<meta property="article:author" content="唐毅">
+<meta property="article:tag" content="wwise">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://nber56.github.io/2023/08/22/Wwise%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%881%EF%BC%89/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://nber56.github.io/2023/08/22/Wwise%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%881%EF%BC%89/","path":"2023/08/22/Wwise基础入门（1）/","title":"Wwise基础入门（1）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Wwise基础入门（1） | 六币载的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">六币载的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">看看我的--@*@--|||</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-works"><a href="/works" rel="section"><i class="download fa-fw"></i>作品</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#101"><span class="nav-number">1.</span> <span class="nav-text">101</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#201"><span class="nav-number">2.</span> <span class="nav-text">201</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#301"><span class="nav-number">3.</span> <span class="nav-text">301</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A6%81%E7%82%B91%EF%BC%9A%E6%B7%BB%E5%8A%A0%E7%AE%80%E5%8D%95%E9%9F%B3%E6%95%88"><span class="nav-number">3.1.</span> <span class="nav-text">要点1：添加简单音效</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A6%81%E7%82%B92%EF%BC%9A-Ak-Ambient%E3%80%81Event-Position-Confiner"><span class="nav-number">3.2.</span> <span class="nav-text">要点2： Ak Ambient、Event Position Confiner</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A6%81%E7%82%B93%EF%BC%9Asoudbank"><span class="nav-number">3.3.</span> <span class="nav-text">要点3：soudbank</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A6%81%E7%82%B94%EF%BC%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC"><span class="nav-number">3.4.</span> <span class="nav-text">要点4：自定义脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A6%81%E7%82%B95-Ak-state%E3%80%81RTPC%E3%80%81Switch"><span class="nav-number">3.5.</span> <span class="nav-text">要点5 Ak state、RTPC、Switch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A6%81%E7%82%B96-AkEnvironment%EF%BC%8C%E7%8E%AF%E5%A2%83%E5%B5%8C%E5%A5%97"><span class="nav-number">3.6.</span> <span class="nav-text">要点6 AkEnvironment，环境嵌套</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">唐毅</p>
+  <div class="site-description" itemprop="description">欢迎访问</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/nber56" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;nber56" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://space.bilibili.com/1636613701?spm_id_from=333.1007.0.0" title="https:&#x2F;&#x2F;space.bilibili.com&#x2F;1636613701?spm_id_from&#x3D;333.1007.0.0" rel="noopener" target="_blank">bilibili空间</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.taptap.cn/user/338598279" title="https:&#x2F;&#x2F;www.taptap.cn&#x2F;user&#x2F;338598279" rel="noopener" target="_blank">taptap空间</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://nber56.github.io/2023/08/22/Wwise%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%881%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="唐毅">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="六币载的博客">
+      <meta itemprop="description" content="欢迎访问">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Wwise基础入门（1） | 六币载的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Wwise基础入门（1）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9F%B3%E9%A2%91%E4%BA%A4%E4%BA%92/" itemprop="url" rel="index"><span itemprop="name">音频交互</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="101"><a href="#101" class="headerlink" title="101"></a><font color=red>101</font></h1><p>下面是旧版本cube的音效交互演示</p>
+<iframe src="//player.bilibili.com/player.html?aid=317510403&bvid=BV1xP411p7mZ&cid=1242641231&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
+
+<p>重新设计了部分音效<br>|  ammo  |<br>|  armour  |<br>|  chaingun  |<br>|  health  |<br>|  itemspawn  |<br>|  rile  |<br>|  rock hit-001  |<br>|  rock hit-002  |<br>|  rocket shot  |<br>|  shotgun blast  |<br>|  shatgun_pump  |<br>|  teleport_emitter  |<br>|  teleporter  |  </p>
+<h1 id="201"><a href="#201" class="headerlink" title="201"></a><font color=red>201</font></h1><p>下面是cube的音乐交互演示</p>
+<iframe src="//player.bilibili.com/player.html?aid=317510403&bvid=BV1xP411p7mZ&cid=1242639522&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
+
+<p>按照原音乐结构重新设计了音乐<br>包含以下部分</p>
+<table>
+<thead>
+<tr>
+<th align="center">boss</th>
+<th align="center">combat</th>
+<th align="center">explore</th>
+<th align="center">story</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">boss-a.wav</td>
+<td align="center">combat-a-drum</td>
+<td align="center">explore-guitar01</td>
+<td align="center">story-main-drum</td>
+</tr>
+<tr>
+<td align="center">boss-a01.mid</td>
+<td align="center">combat-a-guitar</td>
+<td align="center">explore-guitar02</td>
+<td align="center">story-main-syhth</td>
+</tr>
+<tr>
+<td align="center">boss-a02.mid</td>
+<td align="center">combat-b-drum</td>
+<td align="center">explore-synth</td>
+<td align="center">transfrom-story</td>
+</tr>
+<tr>
+<td align="center">boss-c.wav</td>
+<td align="center">cambat-b-guitar</td>
+<td align="center">explore-theme</td>
+<td align="center">transto-story</td>
+</tr>
+<tr>
+<td align="center">boss-d.wav</td>
+<td align="center">combat-bridge-drum</td>
+<td align="center">explore-transtonridge</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">boss-intro.wav</td>
+<td align="center">combat-bridge-guitar</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">combat-transtobridge.wav</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h1 id="301"><a href="#301" class="headerlink" title="301"></a><font color=red>301</font></h1><p>主要记录这部分内容要点，涉及到的不太清晰的知识</p>
+<h2 id="要点1：添加简单音效"><a href="#要点1：添加简单音效" class="headerlink" title="要点1：添加简单音效"></a>要点1：添加简单音效</h2><p><em>捡拾金币，环境声</em><br>1 选择游戏场景（scene）,查看游戏游戏层级视图（Hierarchy,其显示当前游戏场景的游戏对象），加载soundbank，拖入对应wwise picker中soundbank,inspector面板设置（运行游戏前保存工程改动）<br>2 添加篝火环境音效<br>3 添加捡拾金币音效</p>
+<h2 id="要点2：-Ak-Ambient、Event-Position-Confiner"><a href="#要点2：-Ak-Ambient、Event-Position-Confiner" class="headerlink" title="要点2： Ak Ambient、Event Position Confiner"></a>要点2： Ak Ambient、Event Position Confiner</h2><p><em>环境声脚本设置</em><br>三种position type<br>Simple(风车)，large(岩浆)，Multi position(火把)</p>
+<h2 id="要点3：soudbank"><a href="#要点3：soudbank" class="headerlink" title="要点3：soudbank"></a>要点3：soudbank</h2><p><em>加载解压soundbank</em><br>Trigger触发<br>场景切换触发</p>
+<h2 id="要点4：自定义脚本"><a href="#要点4：自定义脚本" class="headerlink" title="要点4：自定义脚本"></a>要点4：自定义脚本</h2><p><em>1 Wwise 专有属性发送事件</em><br><em>2 动画发送event</em><br><em>3 发送audio input</em><br>1 添加属性，保存编辑器   </p>
+<pre><code>publid AK.Wwise.Event MyEvent:  
+    //Access Modifier + Wwise-Type Class + Name of Property
+</code></pre>
+<p>2 编写start()  </p>
+<pre><code>public AK.Wwise.Event MyEvent;
+//#####
+void start()
+&#123;
+    MyEvent.Post (gameobject) ;
+&#125;
+</code></pre>
+<p><em>以上为基础脚本，下面按照脚步声设计</em><br>Start替换为PlayFootstepSound<br>在 void PlayFootstepSoundoO 之前，插入 public  </p>
+<pre><code>using UnityEngine;   
+using Systen.Collections;  
+using Systen.Collections.Generic;  
+
+public class PostWwiseEvent : MonoBehaviour
+&#123;  
+public AK.Wwise.Event MyEvent;   
+ //######  
+public void PlayFootstepsound()  (   
+    Myevent.Post (ganeobject) :  
+&#125;  
+)  
+</code></pre>
+<p>3 选择player，打开animation，scene模块选择Gizmo模式，可在timeline上变换动作<br>4 时间轴处右键add animation event  </p>
+<h2 id="要点5-Ak-state、RTPC、Switch"><a href="#要点5-Ak-state、RTPC、Switch" class="headerlink" title="要点5 Ak state、RTPC、Switch"></a>要点5 Ak state、RTPC、Switch</h2><p>设置进入，离开区域声音效果（总线flanger）<br>设置白天，黑夜环境音变化（blender混合容器）<br>材质切换脚步  </p>
+<h2 id="要点6-AkEnvironment，环境嵌套"><a href="#要点6-AkEnvironment，环境嵌套" class="headerlink" title="要点6 AkEnvironment，环境嵌套"></a>要点6 AkEnvironment，环境嵌套</h2><p>1 发送aux效果（出生点混响）<br>2 使用 AkEnvironment 组件中的 Exclude Others功能，来避免将此 AkEnvironment 中的声音发送到其他 AkEnvironment Trigger</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/wwise/" rel="tag"># wwise</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/07/16/%E6%96%87%E7%AB%A03/" rel="prev" title="文章3">
+                  <i class="fa fa-chevron-left"></i> 文章3
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/08/22/Wwise%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%883%EF%BC%89/" rel="next" title="Wwise基础入门（3）">
+                  Wwise基础入门（3） <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">唐毅</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script size="150" alpha="0.3" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>
