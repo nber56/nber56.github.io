@@ -21,28 +21,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"nber56.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="wwise-unity&#x2F;wwise-ue4">
+    <meta name="description" content="对这款刚上国服不久的游戏比较关注，也感觉值得分析一下，选取一部分分析的重点">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Wwise基础入门（2）">
-<meta property="og:url" content="https://nber56.github.io/2023/08/22/Wwise%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%882%EF%BC%89/index.html">
+<meta property="og:title" content="valorant拆解">
+<meta property="og:url" content="https://nber56.github.io/2023/09/22/valorant%E6%8B%86%E8%A7%A3/index.html">
 <meta property="og:site_name" content="六币仔的博客">
-<meta property="og:description" content="wwise-unity&#x2F;wwise-ue4">
+<meta property="og:description" content="对这款刚上国服不久的游戏比较关注，也感觉值得分析一下，选取一部分分析的重点">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-08-22T12:46:50.226Z">
-<meta property="article:modified_time" content="2023-08-22T13:12:57.933Z">
+<meta property="article:published_time" content="2023-09-22T06:24:31.713Z">
+<meta property="article:modified_time" content="2023-09-22T06:16:29.641Z">
 <meta property="article:author" content="唐毅">
-<meta property="article:tag" content="wwise">
+<meta property="article:tag" content="游戏实例">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://nber56.github.io/2023/08/22/Wwise%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%882%EF%BC%89/">
+<link rel="canonical" href="https://nber56.github.io/2023/09/22/valorant%E6%8B%86%E8%A7%A3/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://nber56.github.io/2023/08/22/Wwise%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%882%EF%BC%89/","path":"2023/08/22/Wwise基础入门（2）/","title":"Wwise基础入门（2）"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://nber56.github.io/2023/09/22/valorant%E6%8B%86%E8%A7%A3/","path":"2023/09/22/valorant拆解/","title":"valorant拆解"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Wwise基础入门（2） | 六币仔的博客</title>
+<title>valorant拆解 | 六币仔的博客</title>
   
 
 
@@ -115,7 +115,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#unity%E7%9B%B8%E5%85%B3"><span class="nav-number">1.</span> <span class="nav-text">unity相关</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ue4%E7%9B%B8%E5%85%B3"><span class="nav-number">2.</span> <span class="nav-text">ue4相关</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B8%B8%E6%88%8F%E6%95%B4%E4%BD%93%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">游戏整体分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A6%E5%99%A8"><span class="nav-number">2.</span> <span class="nav-text">武器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BE%E4%BE%8B%EF%BC%9A%E6%AD%A5%E6%9E%AA"><span class="nav-number">2.1.</span> <span class="nav-text">举例：步枪</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%8D%E5%8D%AB"><span class="nav-number">2.2.</span> <span class="nav-text">戍卫</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8B%82%E5%BE%92"><span class="nav-number">2.3.</span> <span class="nav-text">狂徒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%AA%E6%A2%B0%E7%9A%AE%E8%82%A4"><span class="nav-number">2.4.</span> <span class="nav-text">枪械皮肤</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%80%E8%83%BD%E5%92%8C%E6%8A%80%E8%83%BD%E6%95%88%E6%9E%9C"><span class="nav-number">3.</span> <span class="nav-text">技能和技能效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%A3%B0%E9%9F%B3"><span class="nav-number">4.</span> <span class="nav-text">其他声音</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E9%9F%B3%E5%92%8C%E9%9F%B3%E4%B9%90"><span class="nav-number">5.</span> <span class="nav-text">配音和音乐</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -189,7 +189,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://nber56.github.io/2023/08/22/Wwise%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%882%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="https://nber56.github.io/2023/09/22/valorant%E6%8B%86%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -202,12 +202,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Wwise基础入门（2） | 六币仔的博客">
+      <meta itemprop="name" content="valorant拆解 | 六币仔的博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Wwise基础入门（2）
+          valorant拆解
         </h1>
 
         <div class="post-meta-container">
@@ -218,7 +218,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9F%B3%E9%A2%91%E4%BA%A4%E4%BA%92/" itemprop="url" rel="index"><span itemprop="name">音频交互</span></a>
+          <a href="/categories/%E6%B8%B8%E6%88%8F%E9%9F%B3%E9%A2%91%E9%89%B4%E8%B5%8F/" itemprop="url" rel="index"><span itemprop="name">游戏音频鉴赏</span></a>
         </span>
     </span>
 
@@ -231,14 +231,19 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>wwise-unity&#x2F;wwise-ue4</p>
+    <div class="post-body" itemprop="articleBody"><p>对这款刚上国服不久的游戏比较关注，也感觉值得分析一下，选取一部分分析的重点  </p>
 <span id="more"></span>
-<p>在基础入门（1）中，对wwise相关工作原理基本有了认知和理解，之后再通过游戏比赛积累游戏引擎与wwise的集成经验，所以大概分为两部分，一部分是unity和wwise,另一部分是ue4和wwise.此时需要的资源wwise官方只能提供一部分，还需要其他的参考，其中遇到的不少程序问题并不能很解决。而且游戏越复杂音频也越难，可想而知那些牵连到程序端的问题是很难通过个人解决的。当然，除非你是技术音频。<br>以下是我在游戏比赛中的认识</p>
-<h1 id="unity相关"><a href="#unity相关" class="headerlink" title="unity相关"></a><font color=red>unity相关</font></h1><p>第一阶段<br>【wwise官方文档】（<a target="_blank" rel="noopener" href="https://www.audiokinetic.com/zh/library/edge/?source=Unity&id=index.html%EF%BC%89">https://www.audiokinetic.com/zh/library/edge/?source=Unity&amp;id=index.html）</a><br>以及301课程<br>第二阶段<br>【coju sound-unitywwise】<br>【gameaudioresource】<br>【alessandrofama gameaudio tutorials】<br>以及一系列YouTube频道知识方向平台，很多了<br>结合在一起可以解决诸多的简单问题，例如简单动作，触发音乐，设置区域的空间音频效果<br>第三阶段<br>1 学会debug，依靠经验和综合能力【故障排除】（<a target="_blank" rel="noopener" href="https://www.audiokinetic.com/zh/library/edge/?source=Unity&id=unity_troubleshooting.html%EF%BC%89">https://www.audiokinetic.com/zh/library/edge/?source=Unity&amp;id=unity_troubleshooting.html）</a><br>2 找程序或者自己充当程序，前两个阶段引擎内部拖拉拽，改改参数即可，但是没有开发能力的人很难应对多样需求，而且根本无从下手，遇到问题只能寻求帮助<br>3 无法解决的问题。遇到过，很难顶。  </p>
-<hr>
-<p>做过的的第一个游戏音频是unity的，交作品的时候wwise还没搞好，游戏还有bug没来得及，自己绑定也搞出bug，没提交完整作为音频非常遗憾当时。</p>
-<h1 id="ue4相关"><a href="#ue4相关" class="headerlink" title="ue4相关"></a><font color=red>ue4相关</font></h1><p>参与第一个ue的游戏叫《灯影奇谭》，bug过多，也是一次重要的成长。不同于unity的生态，ue的相关内容比较少，这是一个动作向的游戏，内容规划的颇多。 但是请教了不少行里人，查了不少东西。可以说很系统的了解了不少。<br>1 根据关卡和场景切换音频资源<br>2 根据动作的美术表现匹配音频的风格和逻辑<br>3 搭建空间化的音频系统<br>不懂的话就是一部一个坑，找了不少资源。<br>第一阶段<br>【Wwise Unreal Integration】（<a target="_blank" rel="noopener" href="https://www.audiokinetic.com/zh/library/edge/?source=UE4&id=gs_music_from_blueprint.html%EF%BC%89">https://www.audiokinetic.com/zh/library/edge/?source=UE4&amp;id=gs_music_from_blueprint.html）</a><br>【gameaudioresource】（<a target="_blank" rel="noopener" href="https://gameaudioresource.com/guides/wwise-2019-1-4-unreal-audio-implementation-guide-series/%EF%BC%89">https://gameaudioresource.com/guides/wwise-2019-1-4-unreal-audio-implementation-guide-series/）</a><br>【alessandrofama gameaudio tutorials】（<a target="_blank" rel="noopener" href="https://alessandrofama.com/%EF%BC%89">https://alessandrofama.com/）</a><br>第二阶段<br>问题繁多，大量没有解决，受限于开发和设计能力。很多问题没有进一步的解决，规划之初的内容量远高于最终成品。音频只有简单的内容，毕竟只有两个关卡。</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>感觉很废，所以需要努力干</p>
+<h1 id="游戏整体分析"><a href="#游戏整体分析" class="headerlink" title="游戏整体分析"></a>游戏整体分析</h1><p>美术特点：美漫风格，写实简约感,而oW篇明亮可爱卡通<br>玩法特点：竞技类cs机制，短ttk，小地图，技能辅助枪械<br>世界观背景：充满科技和神奇力量的近未来世界，角色们是超能力者  </p>
+<h1 id="武器"><a href="#武器" class="headerlink" title="武器"></a>武器</h1><p>6类枪1类近战，共17把枪<br>    1 整体的音效定位：最为主要的是怎么在此游戏的美术风格和背景设定上去建立音效设定，还是依照游戏的整体风格，简约美漫风格对应现代的枪械质感，把特效的魔法类科技类元素预留给皮肤音效，同样在素材上更加表现音频干净简约感<br>    2 音效设计框架：武器的价格，伤害，射速，设定等各方面来设计素材的层级，比如伤害高的可以增加低频punch的感受，也可以增加音头的瞬态，诸多的方式和细节，这是一个思路来设计好具有区分度的械音效，可以参照不同的维度理解来对应武器和音效<br>    3 武器音效的特点：较特殊的是按照皮肤特效，设计对应的射击和击杀，在原皮音效上进行区别设计，主要是在特效和质感上去体现皮肤，实际上不少游戏都做的不少，为色和武器皮肤增加特效，可以参考决战平安京的一套赛博朋克系列皮肤  </p>
+<h2 id="举例：步枪"><a href="#举例：步枪" class="headerlink" title="举例：步枪"></a>举例：步枪</h2><p>从价格，伤害，特殊设定评定级别1-4为从低到高，每个级别有明显差异<br>|  名称	|  价格	|  伤害	 |  射速 |  设定  |<br>|  獠犬	|  1	|  1	|  2	|  辅助射击会降低射速字60%具体指开启三发点放模式  |<br>|  戍卫	|  1	|  3	|  1	|  此枪为半自动  |<br>|  幻影	|  2	|  2	|  2	|  消音功能  |<br>|  狂徒	|  2	|  2	|  2	|    </p>
+<h2 id="戍卫"><a href="#戍卫" class="headerlink" title="戍卫"></a>戍卫</h2><p>半自动步枪，同类的还有ak47,sks半自动，M1式加兰德步枪<br>结合步枪的整体分析<br>音效特点：枪音尾设计较长较大  </p>
+<h2 id="狂徒"><a href="#狂徒" class="headerlink" title="狂徒"></a>狂徒</h2><p>使用率最高的枪<br>自动步枪<br>音效特点：中低频撞击感强，在步枪中最厚实  </p>
+<h2 id="枪械皮肤"><a href="#枪械皮肤" class="headerlink" title="枪械皮肤"></a>枪械皮肤</h2><p>作为重要的游戏商品，可以从许多的枪皮中感受到非常游戏的设计，同样音效也延续了简约的整体设计，同时也在音效层次上更加丰满，不会感受到突出过度<br>至尊龙炎<br>紫金狂潮<br>鎏金帝王<br>光炫声谱<br>海洋星球</p>
+<h1 id="技能和技能效果"><a href="#技能和技能效果" class="headerlink" title="技能和技能效果"></a>技能和技能效果</h1><p>技能相对武器更加多一些，每个英雄四个技能，一个免费，一个大招，其余通过购买<br>    技能方式：放置(偏小的附着物，声音偏小)，投掷（有比较明显的轨迹投放，声音中等），施放物（偏向于大范围高伤害技能，声音会有非常明显的类似淡入提示 ）<br>    技能效果：治疗（），眩晕（铁壁e技能），致盲（不死鸟q,芮娜c），负面（火，毒，冰）<br>技能音效特点：总体属于配合视觉和功能，效果不会太多掩盖武器的声音，技能释放生效也会产生非常明显的声音信息，给敌人己方提供行动参考  </p>
+<h1 id="其他声音"><a href="#其他声音" class="headerlink" title="其他声音"></a>其他声音</h1><p>三个比较有重要的声音内容：<br>    脚步声：游戏内听声辩位的基础，并且位置和方向是游戏内空间音频的主要方面<br>    连续击杀特效：非常独特突出的奖励，也体现出游戏强化对连续击杀的奖励</p>
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+<p>下包：传输范围广，突出游戏对局的核心</p>
+<h1 id="配音和音乐"><a href="#配音和音乐" class="headerlink" title="配音和音乐"></a>配音和音乐</h1><p>配音：每个角色都是大佬cv,情绪完全在线，每个特工都演出效果饱满，不多说不懂<br>音乐: 风格定位就是现代感音乐，电子元素，科技元素，总的来说风格比较统一<br>比较代表性的一张valorent专辑，由拳头和制作人shyloom推出的《MV&#x2F;MNT》,基本表现出了本游戏音乐的一个基本属性，其中shyloom在管弦乐器与基于合成器的音景有着非常匹配的要素<br>游戏内音乐是相对较小的一个存在，根本就是突出游戏一个强竞技性，把音效部分作为了战斗的主要背景<br>然后就是角色，剧情，赛事宣传cg的音乐，这一方面在游戏基础音乐定位的基础上，扩展到了更加广泛的其他音乐类型，也邀请国内外说唱音乐人，电子音乐人参与，非常拳头的音乐  </p>
 
     </div>
 
@@ -248,21 +253,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/wwise/" rel="tag"># wwise</a>
+              <a href="/tags/%E6%B8%B8%E6%88%8F%E5%AE%9E%E4%BE%8B/" rel="tag"># 游戏实例</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/08/22/Wwise%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%883%EF%BC%89/" rel="prev" title="Wwise基础入门（3）">
-                  <i class="fa fa-chevron-left"></i> Wwise基础入门（3）
+                <a href="/2023/08/24/%E9%9F%B3%E9%A2%91%E8%AE%BE%E8%AE%A1%E5%90%88%E8%BE%91/" rel="prev" title="音频设计合辑">
+                  <i class="fa fa-chevron-left"></i> 音频设计合辑
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/08/23/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E%E5%9F%BA%E7%A1%80/" rel="next" title="游戏引擎基础">
-                  游戏引擎基础 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
