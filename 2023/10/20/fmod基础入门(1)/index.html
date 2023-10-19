@@ -21,27 +21,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"nber56.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="不定时更新用于分享和记录学习内容（也许有用呢，希望有很多小伙伴可以了解我，同时也互相进步）。">
+    <meta name="description" content="学过一点之后反过来总结一下，fmod作为老牌厂商，感觉不够给力，如果学过其他中间件wwise,criware，感觉到没什么优势目前暂时把学习思路来清理一下，以后遇到项目的时候再详细去分析总结一番   学习资源官方：四个文档，三个教程文档看fmod studio和unity integration,ue integration和fmod engine比较进阶，除非你非常了解编程语言和虚幻引擎教程前">
 <meta property="og:type" content="article">
-<meta property="og:title" content="说明">
-<meta property="og:url" content="https://nber56.github.io/2023/07/13/%E8%AF%B4%E6%98%8E/index.html">
+<meta property="og:title" content="fmod基础入门（1）">
+<meta property="og:url" content="https://nber56.github.io/2023/10/20/fmod%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8(1)/index.html">
 <meta property="og:site_name" content="六币仔的博客">
-<meta property="og:description" content="不定时更新用于分享和记录学习内容（也许有用呢，希望有很多小伙伴可以了解我，同时也互相进步）。">
+<meta property="og:description" content="学过一点之后反过来总结一下，fmod作为老牌厂商，感觉不够给力，如果学过其他中间件wwise,criware，感觉到没什么优势目前暂时把学习思路来清理一下，以后遇到项目的时候再详细去分析总结一番   学习资源官方：四个文档，三个教程文档看fmod studio和unity integration,ue integration和fmod engine比较进阶，除非你非常了解编程语言和虚幻引擎教程前">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-07-13T11:14:50.000Z">
-<meta property="article:modified_time" content="2023-07-13T12:04:49.673Z">
+<meta property="article:published_time" content="2023-10-19T19:00:56.391Z">
+<meta property="article:modified_time" content="2023-10-19T18:59:44.619Z">
 <meta property="article:author" content="唐毅">
+<meta property="article:tag" content="fmod">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://nber56.github.io/2023/07/13/%E8%AF%B4%E6%98%8E/">
+<link rel="canonical" href="https://nber56.github.io/2023/10/20/fmod%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8(1)/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://nber56.github.io/2023/07/13/%E8%AF%B4%E6%98%8E/","path":"2023/07/13/说明/","title":"说明"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://nber56.github.io/2023/10/20/fmod%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8(1)/","path":"2023/10/20/fmod基础入门(1)/","title":"fmod基础入门（1）"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>说明 | 六币仔的博客</title>
+<title>fmod基础入门（1） | 六币仔的博客</title>
   
 
 
@@ -101,7 +102,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -114,6 +115,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text">学习资源</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%98%E6%96%B9%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">官方：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%EF%BC%9A"><span class="nav-number">1.2.</span> <span class="nav-text">其他：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%99%E7%A8%8B%E5%8D%A1%E4%B8%81%E8%BD%A6"><span class="nav-number">2.</span> <span class="nav-text">教程卡丁车</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%99%E7%A8%8B%E7%94%9F%E5%AD%98%E5%B0%84%E5%87%BB"><span class="nav-number">3.</span> <span class="nav-text">教程生存射击</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -187,7 +189,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://nber56.github.io/2023/07/13/%E8%AF%B4%E6%98%8E/">
+    <link itemprop="mainEntityOfPage" href="https://nber56.github.io/2023/10/20/fmod%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8(1)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -200,16 +202,25 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="说明 | 六币仔的博客">
+      <meta itemprop="name" content="fmod基础入门（1） | 六币仔的博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          说明
+          fmod基础入门（1）
         </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9F%B3%E9%A2%91%E4%BA%A4%E4%BA%92/" itemprop="url" rel="index"><span itemprop="name">音频交互</span></a>
+        </span>
+    </span>
 
   
 </div>
@@ -220,10 +231,66 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>不定时更新<br>用于分享和记录学习内容（也许有用呢，希望有很多小伙伴可以了解我，同时也互相进步）。</p>
-<span id="more"></span>
+    <div class="post-body" itemprop="articleBody"><span id="more"></span>
+<p>学过一点之后反过来总结一下，fmod作为老牌厂商，感觉不够给力，如果学过其他中间件wwise,criware，感觉到没什么优势<br>目前暂时把学习思路来清理一下，以后遇到项目的时候再详细去分析总结一番  </p>
+<h1 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h1><h2 id="官方："><a href="#官方：" class="headerlink" title="官方："></a>官方：</h2><p>四个文档，三个教程<br>文档看fmod studio和unity integration,ue integration和fmod engine比较进阶，除非你非常了解编程语言和虚幻引擎<br>教程前两个跟着做一做，卡丁车教程关于基础的集成规则，生存射击关于更多的额交互设计，最后一个celeste教程是一个著名<br>游戏的工程参考，可以多看看。  </p>
+<h2 id="其他："><a href="#其他：" class="headerlink" title="其他："></a>其他：</h2><p>youtoube-Scott Game Sounds<br>使用unity模板2d game kit,较为详细，非常接近实际开发，值得一看  </p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=e_CvWGFYw_GopO4a&amp;list=PL2zNbaZ-EOYyS9EjUiIRK-FN6VPWP9lfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<p>更新记录2023.07.13：</p>
+<p>bibili搬运-Beatrix Moersch<br>感觉也很系统  </p>
+<iframe src="//player.bilibili.com/player.html?aid=605944350&bvid=BV1k84y167Ti&cid=915652365&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p>youtube频道-fmodtv<br><a target="_blank" rel="noopener" href="https://www.youtube.com/@FMODTV/featured">https://www.youtube.com/@FMODTV/featured</a>  </p>
+<p>bilibili作者-Outervoid_虚域<br>非常容易理解的内容<br><a target="_blank" rel="noopener" href="https://space.bilibili.com/91451579/channel/seriesdetail?sid=2985348">https://space.bilibili.com/91451579/channel/seriesdetail?sid=2985348</a>  </p>
+<h1 id="教程卡丁车"><a href="#教程卡丁车" class="headerlink" title="教程卡丁车"></a>教程卡丁车</h1><p>FMOD - Integration Tutorial_Karting Microgame</p>
+<ol>
+<li>使用模板Karting Microgame(unity2020.3.48f1c1)和example fspro(fmod2.02.17)</li>
+<li>在fmod中build</li>
+<li>在unity中导入fmod for unity</li>
+<li>unity设置<ol>
+<li>选择fmod工程</li>
+<li>Listener，audioengine，改为fmod</li>
+<li>其他多项设置</li>
+</ol>
+</li>
+<li>添加声音：卡丁车引擎<br>挂接	添加event emitter<br> 设置参数1000为默认rpm<br>脚本关联	在自定义程序集上添加fmodunity程序集，apply一下</li>
+</ol>
+<p>修改脚本    </p>
+<pre><code>using UnityEngine;
+namespace KartGame.KartSystems
+&#123;
+    /// &lt;summary&gt;
+    /// This class produces audio for various states of the vehicle&#39;s movement.
+    /// &lt;/summary&gt;
+    public class ArcadeEngineAudio : MonoBehaviour
+    &#123;
+        public float minRPM = 0;
+        public float maxRPM = 5000;
+        ArcadeKart arcadeKart;
+        void Awake()
+        &#123;
+            arcadeKart = GetComponentInParent&lt;ArcadeKart&gt;();
+        &#125;
+        void Update()
+        &#123;
+            float kartSpeed     = arcadeKart != null ? arcadeKart.LocalSpeed() : 0;
+            // set RPM value for the FMOD event
+            float effectiveRPM = Mathf.Lerp(minRPM, maxRPM, kartSpeed);
+            var emitter = GetComponent&lt;FMODUnity.StudioEventEmitter&gt;();
+            emitter.SetParameter(&quot;RPM&quot;, effectiveRPM);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<ol start="6">
+<li><p>添加声音：氛围  </p>
+</li>
+<li><p>添加声音：音乐<br>fmod中创建事件Kart Music<br> 导入音乐，创建循环<br> 为事件分配混音<br> 挂接	<br> 联调	<br> 混音器界面底部打卡，再build</p>
+</li>
+<li><p>注意：在开始添加 FMOD Studio 事件之前，最好删除项目中当前存在的预先存在的 Unity 音频源。<br>否则出现许多报错</p>
+</li>
+</ol>
+<h1 id="教程生存射击"><a href="#教程生存射击" class="headerlink" title="教程生存射击"></a>教程生存射击</h1><p>教程中的内容已经过时不可获得了，理解教程即可<br>1 启动运行fmod和unity，理解audio source,audio asset<br>2 角色音效实现：玩家和敌人音效<br>3 自适应音乐<br>4 混音器快照mixer snapshot<br>5 分析器profiler</p>
 
     </div>
 
@@ -232,15 +299,21 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/fmod/" rel="tag"># fmod</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2023/09/22/valorant%E6%8B%86%E8%A7%A3/" rel="prev" title="valorant拆解">
+                  <i class="fa fa-chevron-left"></i> valorant拆解
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/07/15/markdown-test/" rel="next" title="markdown基础语法">
-                  markdown基础语法 <i class="fa fa-chevron-right"></i>
+                <a href="/2023/10/20/%E9%9F%B3%E9%A2%91%E8%AE%BE%E8%AE%A1%E5%90%88%E8%BE%912/" rel="next" title="音频设计合辑">
+                  音频设计合辑 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
