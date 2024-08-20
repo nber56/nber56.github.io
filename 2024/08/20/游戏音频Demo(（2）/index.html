@@ -21,28 +21,32 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"nber56.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="欢迎访问">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="https://nber56.github.io/categories/index.html">
+    <meta name="description" content="wwise集成ue5的设计案例,主要分为三个部分进行介绍，物体交互，角色动作，环境">
+<meta property="og:type" content="article">
+<meta property="og:title" content="游戏案例二">
+<meta property="og:url" content="https://nber56.github.io/2024/08/20/%E6%B8%B8%E6%88%8F%E9%9F%B3%E9%A2%91Demo(%EF%BC%882%EF%BC%89/index.html">
 <meta property="og:site_name" content="六币仔的博客">
-<meta property="og:description" content="欢迎访问">
+<meta property="og:description" content="wwise集成ue5的设计案例,主要分为三个部分进行介绍，物体交互，角色动作，环境">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-07-15T14:59:36.000Z">
-<meta property="article:modified_time" content="2023-07-15T15:05:39.090Z">
+<meta property="og:image" content="https://nber56.github.io/2024/08/20/%E6%B8%B8%E6%88%8F%E9%9F%B3%E9%A2%91Demo(%EF%BC%882%EF%BC%89/pic/sb01.png">
+<meta property="og:image" content="https://nber56.github.io/2024/08/20/%E6%B8%B8%E6%88%8F%E9%9F%B3%E9%A2%91Demo(%EF%BC%882%EF%BC%89/pic/sb02.png">
+<meta property="og:image" content="https://nber56.github.io/2024/08/20/%E6%B8%B8%E6%88%8F%E9%9F%B3%E9%A2%91Demo(%EF%BC%882%EF%BC%89/pic/sb03.png">
+<meta property="article:published_time" content="2024-08-20T04:38:45.819Z">
+<meta property="article:modified_time" content="2024-08-20T05:36:58.601Z">
 <meta property="article:author" content="唐毅">
+<meta property="article:tag" content="wwise">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://nber56.github.io/2024/08/20/%E6%B8%B8%E6%88%8F%E9%9F%B3%E9%A2%91Demo(%EF%BC%882%EF%BC%89/pic/sb01.png">
 
 
-<link rel="canonical" href="https://nber56.github.io/categories/">
+<link rel="canonical" href="https://nber56.github.io/2024/08/20/%E6%B8%B8%E6%88%8F%E9%9F%B3%E9%A2%91Demo(%EF%BC%882%EF%BC%89/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"https://nber56.github.io/categories/index.html","path":"categories/index.html","title":"分类"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://nber56.github.io/2024/08/20/%E6%B8%B8%E6%88%8F%E9%9F%B3%E9%A2%91Demo(%EF%BC%882%EF%BC%89/","path":"2024/08/20/游戏音频Demo(（2）/","title":"游戏案例二"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>分类 | 六币仔的博客
-</title>
+<title>游戏案例二 | 六币仔的博客</title>
   
 
 
@@ -102,7 +106,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -115,6 +119,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%A9%E4%BD%93%E4%BA%A4%E4%BA%92"><span class="nav-number">1.</span> <span class="nav-text">物体交互</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%92%E8%89%B2%E5%8A%A8%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">角色动作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83"><span class="nav-number">3.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">空间音频处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -177,41 +182,114 @@
 
     </div>
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
 
 
-    
-    
-    
-    <div class="post-block" lang="zh-CN"><header class="post-header">
+  
 
-<h1 class="post-title" itemprop="name headline">分类
-</h1>
 
-<div class="post-meta-container">
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://nber56.github.io/2024/08/20/%E6%B8%B8%E6%88%8F%E9%9F%B3%E9%A2%91Demo(%EF%BC%882%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="唐毅">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="六币仔的博客">
+      <meta itemprop="description" content="欢迎访问">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="游戏案例二 | 六币仔的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          游戏案例二
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9F%B3%E9%A2%91%E4%BA%A4%E4%BA%92/" itemprop="url" rel="index"><span itemprop="name">音频交互</span></a>
+        </span>
+    </span>
+
+  
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      <div class="post-body"><div class="category-all-page">
-  <div class="category-all-title">
-    目前共计 6 个分类
-  </div>
-  <div class="category-all">
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82/">杂</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/">游戏引擎</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B8%B8%E6%88%8F%E9%9F%B3%E9%A2%91%E9%89%B4%E8%B5%8F/">游戏音频鉴赏</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E9%9F%B3%E5%85%8B%E9%9A%86/">语音克隆</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9F%B3%E9%A2%91%E4%BA%A4%E4%BA%92/">音频交互</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9F%B3%E9%A2%91%E8%AE%BE%E8%AE%A1/">音频设计</a><span class="category-list-count">3</span></li></ul>
-  </div>
-</div>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>wwise集成ue5的设计案例,主要分为三个部分进行介绍，物体交互，角色动作，环境</p>
+<span id="more"></span>
+<h1 id="物体交互"><a href="#物体交互" class="headerlink" title="物体交互"></a>物体交互</h1><p>如下，一共七个交互物体</p>
+<center class ='img'>
+<div align=center><img src=".\pic\sb01.png" width=60%>  
+</center>
+交互逻辑：点按开关门/六个可移动箱子，摩擦地面，且相互碰撞/3个悬浮平台/升降平台/开门，和1非常相似/伸缩装置/风扇装置
+每个物体的交互都有区别，需要部分ue蓝图或者代码编辑能力
 
-      </div>
-      
-      
-      
+<h1 id="角色动作"><a href="#角色动作" class="headerlink" title="角色动作"></a>角色动作</h1><p>飞行（启动，悬浮，释放，关闭），走路（沙地，铁板地，草地，石板地，水泥地），跑步，跳跃，落地<br>技能复制，按下按钮（大，小）</p>
+<center class ='img'>
+<div align=center><img src=".\pic\sb02.png" width=60%>  
+</center>
+
+<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p>区域分类<br>区域1（中心平台，设定为封闭环境）区域2（类工厂建筑物，两个）区域3（树木草地附近）区域4（风沙野外）区域5（其他野外区域）</p>
+<center class ='img'>
+<div align=center><img src=".\pic\sb03.png" width=60%>  
+</center>
+
+<p>逻辑1 地势增高，远处风力增强,再达到一定高度时，触发较多运动的随机风<br>逻辑2 由远及近，风沙增强，8个区域，可通过混合容器进行变化模拟<br>逻辑3 设定3个区域（虫鸣鸟叫）<br>逻辑4 点声源（排气口）</p>
+<h1 id="空间音频处理"><a href="#空间音频处理" class="headerlink" title="空间音频处理"></a>空间音频处理</h1><p>需要做好各种声音的混合与连接，可以感觉到效果对声音障碍，声音门户，trigger box各个位置处理好效果</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>wwise远远比fmod和criware更加容易上手，逻辑清晰，而且对于开发者来说也更加便捷</p>
+
     </div>
 
     
     
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/wwise/" rel="tag"># wwise</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/03/09/%E9%9F%B3%E9%A2%91%E8%AE%BE%E8%AE%A1%E5%90%88%E8%BE%913/" rel="prev" title="音频设计合辑3">
+                  <i class="fa fa-chevron-left"></i> 音频设计合辑3
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/08/20/%E6%B8%B8%E6%88%8F%E9%9F%B3%E9%A2%91Demo%EF%BC%881%EF%BC%89/" rel="next" title="游戏案例一">
+                  游戏案例一 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
 </div>

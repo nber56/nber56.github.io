@@ -21,28 +21,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"nber56.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="欢迎访问">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="https://nber56.github.io/categories/index.html">
+    <meta name="description" content="非常好的模型，而且能够找到大量的学习整合包，如果不想麻烦可以自己尝试，推荐">
+<meta property="og:type" content="article">
+<meta property="og:title" content="so-vits-svc语音模型">
+<meta property="og:url" content="https://nber56.github.io/2024/08/20/%E8%AF%AD%E9%9F%B3%E5%85%8B%E9%9A%86svs/index.html">
 <meta property="og:site_name" content="六币仔的博客">
-<meta property="og:description" content="欢迎访问">
+<meta property="og:description" content="非常好的模型，而且能够找到大量的学习整合包，如果不想麻烦可以自己尝试，推荐">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-07-15T14:59:36.000Z">
-<meta property="article:modified_time" content="2023-07-15T15:05:39.090Z">
+<meta property="article:published_time" content="2024-08-20T05:34:54.868Z">
+<meta property="article:modified_time" content="2024-08-20T05:34:36.861Z">
 <meta property="article:author" content="唐毅">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://nber56.github.io/categories/">
+<link rel="canonical" href="https://nber56.github.io/2024/08/20/%E8%AF%AD%E9%9F%B3%E5%85%8B%E9%9A%86svs/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"https://nber56.github.io/categories/index.html","path":"categories/index.html","title":"分类"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://nber56.github.io/2024/08/20/%E8%AF%AD%E9%9F%B3%E5%85%8B%E9%9A%86svs/","path":"2024/08/20/语音克隆svs/","title":"so-vits-svc语音模型"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>分类 | 六币仔的博客
-</title>
+<title>so-vits-svc语音模型 | 六币仔的博客</title>
   
 
 
@@ -102,7 +101,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -115,6 +114,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-number">1.</span> <span class="nav-text">环境搭建</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83%E6%8E%A8%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">训练推理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E5%A4%84%E7%90%86%EF%BC%9A%E9%9A%8F%E6%9C%BA%E5%BD%95%E4%BA%86%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%80%E5%8F%A5%E8%AF%9D"><span class="nav-number">2.0.1.</span> <span class="nav-text">预处理：随机录了自己的一句话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AE%E8%B0%83%E8%AE%AD%E7%BB%83"><span class="nav-number">2.0.2.</span> <span class="nav-text">微调训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A8%E7%90%86"><span class="nav-number">2.0.3.</span> <span class="nav-text">推理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -177,41 +177,130 @@
 
     </div>
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
 
 
-    
-    
-    
-    <div class="post-block" lang="zh-CN"><header class="post-header">
+  
 
-<h1 class="post-title" itemprop="name headline">分类
-</h1>
 
-<div class="post-meta-container">
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://nber56.github.io/2024/08/20/%E8%AF%AD%E9%9F%B3%E5%85%8B%E9%9A%86svs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="唐毅">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="六币仔的博客">
+      <meta itemprop="description" content="欢迎访问">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="so-vits-svc语音模型 | 六币仔的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          so-vits-svc语音模型
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AF%AD%E9%9F%B3%E5%85%8B%E9%9A%86/" itemprop="url" rel="index"><span itemprop="name">语音克隆</span></a>
+        </span>
+    </span>
+
+  
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      <div class="post-body"><div class="category-all-page">
-  <div class="category-all-title">
-    目前共计 6 个分类
-  </div>
-  <div class="category-all">
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82/">杂</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/">游戏引擎</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B8%B8%E6%88%8F%E9%9F%B3%E9%A2%91%E9%89%B4%E8%B5%8F/">游戏音频鉴赏</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E9%9F%B3%E5%85%8B%E9%9A%86/">语音克隆</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9F%B3%E9%A2%91%E4%BA%A4%E4%BA%92/">音频交互</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9F%B3%E9%A2%91%E8%AE%BE%E8%AE%A1/">音频设计</a><span class="category-list-count">3</span></li></ul>
-  </div>
-</div>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>非常好的模型，而且能够找到大量的学习整合包，如果不想麻烦可以自己尝试，推荐</p>
+<span id="more"></span>
+<p>【花儿不哭up主】（【耗时两个月自主研发的低成本AI音色克隆软件，免费送给大家！【GPT-SoVITS】】 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV12g4y1m7Uw/?share_source=copy_web&vd_source=daa9c94b8b2ab3ff49a4e6d8fc6a3b9e%EF%BC%89">https://www.bilibili.com/video/BV12g4y1m7Uw/?share_source=copy_web&amp;vd_source=daa9c94b8b2ab3ff49a4e6d8fc6a3b9e）</a></p>
+<h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><p>需要安装cuda cudnn pytorch等等</p>
+<h1 id="训练推理"><a href="#训练推理" class="headerlink" title="训练推理"></a>训练推理</h1><p>过程比较细节，不难<br>本人做了一小部分尝试，可以给出参考</p>
+<h3 id="预处理：随机录了自己的一句话"><a href="#预处理：随机录了自己的一句话" class="headerlink" title="预处理：随机录了自己的一句话"></a>预处理：随机录了自己的一句话</h3><table>
+<thead>
+<tr>
+<th>角色</th>
+<th>文本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>本人</td>
+<td>识时务者为俊杰</td>
+</tr>
+<tr>
+<td>爱莉希雅（崩坏3）</td>
+<td>哎呀，真是有趣的设计呢</td>
+</tr>
+<tr>
+<td>盖伦（英雄联盟）</td>
+<td>将审判不信神的家伙们，将他们投入光明</td>
+</tr>
+</tbody></table>
+<h3 id="微调训练"><a href="#微调训练" class="headerlink" title="微调训练"></a>微调训练</h3><h3 id="推理"><a href="#推理" class="headerlink" title="推理"></a>推理</h3><p>我找了一点文本进行测试：<br>    Like fools we clung to the old hatreds ,and fought as we had for generations</p>
+<pre><code>【魔兽争霸3战役全英文剧情对白、过场动画及彩蛋（分P）】（p1_36s） https://www.bilibili.com/video/BV1Yb411a7vu/?share_source=copy_web&amp;vd_source=daa9c94b8b2ab3ff49a4e6d8fc6a3b9e
 
-      </div>
-      
-      
-      
+  A cryptobiote a day keeps the timefall away.
+
+【【北忆】《死亡搁浅》游戏电影 | 中英双字 | 21:9 | 4K | HDR】(p1_11m.47s) https://www.bilibili.com/video/BV1724y1p7vi/?share_source=copy_web&amp;vd_source=daa9c94b8b2ab3ff49a4e6d8fc6a3b9e
+
+
+看来你已经没有办法来帮助我了，我还是最好离你远一点比较好，抱歉
+
+你个废物，再看见我了，你应该感到彻底的失败和耻辱，哼！快滚吧！
+
+可是，我唯一只会对你心动，我的小狗啊！
+
+请你看着我的眼睛，我难道不够你的喜欢吗？啊？
+
+八百标兵奔北坡， 炮兵并排北边跑。 炮兵怕把标兵碰， 标兵怕碰炮兵炮。 八了百了标了兵了奔  了北了坡了， 炮了兵了并了排了北了边了跑了，炮了兵了怕了把了标了兵了碰了， 标了兵了怕了碰了炮了兵了炮了。
+</code></pre>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>  效果还可以，在商业化上还是有能力缺点的，但是音频效果实际已经发出好了，尽管在特殊的人声细节多样性上还是上限比较明显。已经非常好了，但是还不够</p>
+
     </div>
 
     
     
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/08/20/%E6%B8%B8%E6%88%8F%E9%9F%B3%E9%A2%91Demo%EF%BC%881%EF%BC%89/" rel="prev" title="游戏案例一">
+                  <i class="fa fa-chevron-left"></i> 游戏案例一
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
 </div>
